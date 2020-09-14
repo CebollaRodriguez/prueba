@@ -1,0 +1,309 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;;
+}
+body{
+    background: #000000;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+
+.nav-main a{
+    color: #6b6b6b;
+    text-decoration: none;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+}
+/*Navegacion*/
+.nav-main{
+    width: 100%;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0px;
+}
+.nav-brand{
+    width: 50px;
+}
+/*Navegacion Izquierda*/
+.nav-main ul{
+    display: flex;
+}
+
+.nav-main ul li{
+    padding: 10px;
+}
+
+.nav-main ul li a{
+    padding: 3px;
+}
+
+.nav-main ul li a:hover{
+    border-bottom: 2px solid #6b6b6b; 
+}
+
+.nav-main ul.nav-menu{
+    flex: 1;
+    margin-left: 20px;
+}
+
+/*NAVEGACION DERECHA*/
+
+.nav-menu-right{
+    margin-right: 20px;
+    padding: 5px;
+    text-decoration: none;
+    list-style: none
+}
+
+#lupa{    
+    color: #6b6b6b;
+}
+
+#cuenta{
+    color: #6b6b6b;
+    ;
+   
+}
+
+.menu-btn{
+    position: absolute;
+    cursor: pointer;
+    top: 18px;
+    right: 15px;
+    z-index: 2;
+    display: none;
+}
+
+
+/* EVENTO PRINCIPAL*/
+
+hr{
+    margin: 10px 3px;
+}
+
+.showcase{
+    width: 100%;
+    height: 300px;
+    background: url(./img/pruebas1.jpg) no-repeat center center/cover ;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btn{
+    
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 15px;
+    background: #262626;
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px solid #ffffff;
+    margin: 10px 0px;
+}
+
+.btn:hover{
+    opacity: .7;
+}
+
+.showcase h2,
+.showcase p{
+    margin-bottom: 10px;
+}
+
+/* CARDS CONTAINER*/
+
+.cards-container{
+    width: 85%;
+    margin: auto;
+}
+
+/* CARDS */
+
+.news-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 20px 20px;
+    width: 100%;
+}
+
+.news-cards img{
+    width: 100%;
+    height: 200px;
+}
+.news-cards h3{
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.news-cards a{
+    padding: 2px 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.news-cards a:hover{
+    text-decoration: underline;
+}
+
+/* PRIMER BANNER */
+
+.cards-banner-one{
+    width: 100%;
+    height: 350px;
+    background: url(./img/añañin.jpg) no-repeat center center/cover;
+    margin-bottom: 40px;
+}
+
+.cards-banner-one .content{
+    width: 40%;
+    padding: 90px 0 0 30px;
+    color: #ffffff;
+}
+
+/* SGUNDO BANNER*/
+
+.cards-banner-two{
+    width: 100%;
+    height: 350px;
+    background: url(./img/bocspj.jpg) no-repeat center center/cover;
+    margin-bottom: 40px;
+}
+
+.cards-banner-two .content{
+    width: 40%;
+    padding: 90px 0 0 30px;
+    color: #ffffff;
+}
+
+/* SOCIAL */
+
+.social{
+    margin: 50px;
+}
+
+.social p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a {
+    margin: 0 30px;
+}
+
+.links a i {
+    font-size: 3rem;
+}
+
+/* FOOTER LINKS*/
+.footer-links{
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.footer-container ul{
+    margin: 0 auto;
+}
+
+.footer-container ul li {
+    line-height: 2;
+}
+
+.footer {
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 750px) {
+   
+   .menu-btn {
+       display: block;
+   }
+
+    .nav-main ul.nav-menu{
+       display: block;
+       position: absolute;
+       top: 0;
+       left: 0;
+       background: #2f3640;
+       height: 100%;
+       padding: 30px;
+       opacity: .95;;
+       transform: translateX(-400px);
+       transition: transform .5s ease-in-out;
+   }
+   
+   .nav-main ul.nav-menu.show {
+       transform: translateX(-20px);
+   }
+
+   .nav-main ul.nav-menu li {
+       padding: 20px;
+       font-size: 14px;
+   }
+
+   .nav-main ul.nav-menu-right {
+       margin-right: 40px;
+   }
+
+    .news-cards{
+       grid-template-columns: repeat(2, 1fr);
+   }
+
+   .cards-banner-one .content,
+   .cards-banner-two .content
+   {
+        width: 80%;
+   }
+
+   .footer-links .footer-container{
+       grid-template-columns: repeat(2, 1fr);
+   }
+}
